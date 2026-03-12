@@ -2,13 +2,13 @@
 
 
 
-\## 🎯 Business Objective
+\## Business Objective
 
 The goal of this project was to transition a retail company's manual Excel-based reporting (handling 300k+ rows) into a structured \*\*PostgreSQL\*\* environment. By doing so, I aimed to automate data consolidation and uncover why certain high-value products were seeing checkout drop-offs.
 
 
 
-\## 🛠️ Tools Used
+\## Tools Used
 
 \* \*\*SQL (PostgreSQL):\*\* For data warehousing, complex joins, and window functions.
 
@@ -20,7 +20,7 @@ The goal of this project was to transition a retail company's manual Excel-based
 
 
 
-\## 💡 Key Insights
+\## Key Insights
 
 1\.  \*\*Checkout Friction:\*\* Discovered a \*\*28.57% drop-off rate\*\* at the checkout stage.
 
@@ -30,7 +30,14 @@ The goal of this project was to transition a retail company's manual Excel-based
 
 
 
-\## 🚀 How to Run the Analysis
+\##  How to Run the Analysis
 
 1\.  Run the scripts in `/sql\_scripts/analysis.sql` to build the database and see the insights.
+
+
+## Python Data Automation
+To ensure high data quality before analysis, I developed a Python-based cleaning pipeline:
+* **Library Used:** Pandas
+* **Automation:** The script `data_cleaning.py` automatically detects and removes rows with null values (NaN) from Excel/CSV datasets.
+* **Workflow:** `Raw Data` -> `Pandas Processing` -> `Cleaned Data`
 
