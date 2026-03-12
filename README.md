@@ -1,43 +1,44 @@
-\# Retail Analytics \& Data Integrity Project
+# Retail Sales Analytics: End-to-End Data Pipeline
 
+This project demonstrates a complete data engineering and analytics workflow. I moved from managing raw transaction data in a database to automating data quality checks and finally delivering business insights through an interactive dashboard.
 
+## 🚀 Project Overview
+The goal was to transform messy, raw retail data into a clean, reliable source of truth for business decision-making.
 
-\## Business Objective
+### 1. Data Extraction & Management (SQL)
+* **Tool:** PostgreSQL
+* **Action:** Created and managed relational tables to store retail transactions.
+* **Skills:** Schema design, data types, and structural integrity.
 
-The goal of this project was to transition a retail company's manual Excel-based reporting (handling 300k+ rows) into a structured \*\*PostgreSQL\*\* environment. By doing so, I aimed to automate data consolidation and uncover why certain high-value products were seeing checkout drop-offs.
+### 2. Data Automation & Quality (Python)
+* **Tool:** Python (Pandas)
+* **Script:** `data_cleaning.py`
+* **Action:** Developed an automated pipeline that:
+    * Loads raw `.xlsx` or `.csv` files.
+    * Programmatically identifies missing values (Null/NaN).
+    * Removes incomplete records to ensure 100% data accuracy.
+    * Exports a "Cleaned" dataset ready for visualization.
 
+### 3. Data Visualization (Power BI)
+* **Tool:** Power BI Desktop
+* **Action:** Engineered a high-level executive dashboard connected directly to the cleaned Python output.
+* **Key Visuals:**
+    * **Total Revenue KPI:** Tracks the exact financial performance.
+    * **Revenue by Product Category:** Identifies top-performing products (e.g., Product 103).
+    * **Sales Volume Distribution:** Analyzes the physical movement of stock.
 
+## 🛠️ Tech Stack
+* **Database:** PostgreSQL
+* **Languages:** SQL, Python
+* **Libraries:** Pandas, Openpyxl
+* **Visualization:** Power BI
+* **Version Control:** Git & GitHub
 
-\## Tools Used
+## 📂 Project Structure
+* `sql_scripts/`: SQL commands for database setup.
+* `python_scripts/`: Python automation and cleaning logic.
+* `data/`: Contains both `raw_data` and the Python-generated `cleaned_sales_data`.
+* `Retail_Sales_Dashboard.pbix`: The source Power BI file.
 
-\* \*\*SQL (PostgreSQL):\*\* For data warehousing, complex joins, and window functions.
-
-\* \*\*Python:\*\* For automating the cleaning of messy Excel workbooks.
-
-\* \*\*Power BI:\*\* To visualize regional KPIs and checkout funnels.
-
-\* \*\*Git/GitHub:\*\* For version control.
-
-
-
-\## Key Insights
-
-1\.  \*\*Checkout Friction:\*\* Discovered a \*\*28.57% drop-off rate\*\* at the checkout stage.
-
-2\.  \*\*Product Analysis:\*\* Identified that the 'Pro Laptop 15' had the highest abandonment rate, suggesting a need for price-point review or shipping incentives.
-
-3\.  \*\*Data Quality:\*\* Established a "Single Source of Truth" by implementing primary and foreign key constraints, eliminating the duplicate data issues found in the original Excel files.
-
-
-
-\##  How to Run the Analysis
-
-1\.  Run the scripts in `/sql\_scripts/analysis.sql` to build the database and see the insights.
-
-
-## Python Data Automation
-To ensure high data quality before analysis, I developed a Python-based cleaning pipeline:
-* **Library Used:** Pandas
-* **Automation:** The script `data_cleaning.py` automatically detects and removes rows with null values (NaN) from Excel/CSV datasets.
-* **Workflow:** `Raw Data` -> `Pandas Processing` -> `Cleaned Data`
-
+## 📈 Final Result
+The final dashboard provides a real-time view of sales performance with 0% data error rate, thanks to the automated Python cleaning layer.
