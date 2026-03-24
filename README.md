@@ -17,7 +17,7 @@ The goal was to transform messy, raw retail data into a clean, reliable source o
     * Loads raw `.xlsx` or `.csv` files.
     * Programmatically identifies missing values (Null/NaN).
     * Removes incomplete records to ensure 100% data accuracy.
-    * Exports a "Cleaned" dataset ready for visualization.
+    * Exports a "Cleaned" dataset ready for visualization 
 
 ### 3. Data Visualization (Power BI)
 * **Tool:** Power BI Desktop
